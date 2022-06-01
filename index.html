@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Bootstrap 5-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<!-- Favicon -->
+<link rel="icon" type="image/png" href="images/logo 2 pizzaria.jpg">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Pizzaria Itália</title>
+</head>
+<body>
+  <nav class="topnav">
+      <a class ="ativo" href ="#">Pizzaria Itália</a>
+      <a href="#blog"> </a>
+      <a href="#contato">Contato</a>
+      <div class="topnav-right">
+          <a href="#sobre">Sobre</a>
+      </div>
+  </nav>
+<br>
+  </body>
+
+<body class="login">
+  <div class="card" style="width: 25%;">
+    <div class="text-center my-5">
+      <!-- m de margin e y de top e bottom. Saiba mais em: https://getbootstrap.com/docs/5.0/utilities/spacing/ -->
+      <img src="images/logo 2 pizzaria.jpg" alt="logo Pizzaria Itu" width="300">
+      <h3>Pizzaria Itália</h3>
+      <h4>Seja Bem-Vindo!</h4>
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">Faça seu Cadastro</h5>
+      <form>
+        <div class="form-group">
+          <label for="emailInput">E-mail</label>
+          <input type="email" class="form-control" placeholder="E-mail do usuário" id="emailInput">
+        </div>
+        <div class="form-group">
+          <label for="passwordInput">Senha</label>
+          <input type="password" class="form-control" placeholder="Senha do usuário" id="passwordInput">
+        </div>
+      </form>
+      <div class="mt-3">
+        <button class="btn btn-outline-primary me-2" onclick="loginFirebase(document.getElementById('emailInput').value, 
+      document.getElementById('passwordInput').value)">🔐 Autenticar </button>
+
+        <button type="button" class="btn btn-outline-success" onclick="novoUsuario(document.getElementById('emailInput').value,
+      document.getElementById('passwordInput').value)"> 📝Criar nova conta</button>
+      </div>
+    </div>
+  </div>
+<!-- Carregamento dos scripts -->
+  <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-analytics.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-database.js"></script>
+  <script src="js/firebase.js"></script>
+  <script src="js/authentication.js"></script>
+  <div>
+
+    <footer>
+      
+      <p> Pizzaria Itália  - Todos os direitos reservados &copy;</p>
+      
+  </footer>
+
+</body>
+</html>
